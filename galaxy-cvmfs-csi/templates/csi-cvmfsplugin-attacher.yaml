@@ -27,6 +27,9 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   serviceName: "csi-cvmfsplugin-attacher"
+  selector:
+    matchLabels:
+      app: csi-cvmfsplugin-attacher
   replicas: 1
   template:
     metadata:

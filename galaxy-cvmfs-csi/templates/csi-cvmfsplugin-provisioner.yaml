@@ -27,6 +27,9 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   serviceName: "csi-cvmfsplugin-provisioner"
+  selector:
+    matchLabels:
+      app: csi-cvmfsplugin-provisioner
   replicas: 1
   template:
     metadata:
