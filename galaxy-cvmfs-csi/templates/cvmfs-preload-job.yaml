@@ -13,6 +13,7 @@ metadata:
     app.kubernetes.io/managed-by: {{ $.Release.Service }}
   annotations:
     "helm.sh/hook": "post-install"
+    "hook-weight": "-1"
     "helm.sh/hook-delete-policy": "before-hook-creation"
 spec:
   accessModes:
