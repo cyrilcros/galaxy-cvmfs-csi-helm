@@ -28,7 +28,7 @@ rules:
     resources: ["persistentvolumeclaims"]
     verbs: ["get", "list", "watch", "update"]
   - apiGroups: ["storage.k8s.io"]
-    resources: ["storageclasses"]
+    resources: ["storageclasses", "volumeattachments"]
     verbs: ["get", "list", "watch"]
   - apiGroups: [""]
     resources: ["events"]
